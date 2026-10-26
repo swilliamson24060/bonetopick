@@ -1,26 +1,22 @@
-# A Bone to Pick — Doorway Playtest
+# A Bone to Pick — Great Oak Siege
 
-Open `index.html` directly in a modern browser. Everything is embedded: no installation, server, account or internet connection is required.
+Open index.html to play, or visit https://swilliamson24060.github.io/bonetopick/.
 
 ## Play
 
-1. Dismiss the introduction. Prepare traps with 1 / 2 or the build cards, then click marked spots. Position 1 is nearest the Oak; position 4 is farthest away. A snare and branch can share a spot. The center lane is already equipped.
-2. Start the wave. Branches automatically strike skeletons entering their sweep area, then reset in 6.5 seconds. Hover or click a branch to inspect its range. Lane indicators show whether branches are armed or resetting.
-3. Click loose bones to dispatch the chipmunk. Materials are awarded only when the crew returns home. Nearby enemies force retreat. R recalls the crew, dropping any carried load.
-4. Skeletons that reach loose bones become two-hit Bone Brutes. Both Root Snares and Branch Slappers work automatically.
-5. Space pauses. Escape cancels building. Restart resets the entire encounter.
+- Choose a trap, then tap a marked spot. Tap the same card again to cancel.
+- Root Snare costs 30 and holds enemies; resets after 11 seconds.
+- Log Drop costs 50, sends one skeleton to the same horizontal position on the branch below, and resets after 8 seconds. It does no damage. Cannot be placed on the bottom branch.
+- Brambles cost 40, deal one damage to nearby skeletons on their own branch, and reset after 5 seconds.
+- Stack logs over brambles for an automatic gravity combo. Each spot holds one trap.
+- Skeletons follow Crown rightward, Bough leftward, then Home rightward. Ladders at the ends connect the routes. Only bottom-doorstep breaches damage the Oak.
+- Tap bone piles to dispatch one salvage chipmunk. Nearby enemies force retreat; recall drops any carried load. Uncollected bones can turn a skeleton into a two-hit Bone Brute.
+- Prepare freely before starting. Pause freezes the simulation. Restart resets it. Remove refunds full cost in preparation, half during play.
 
-The wave lasts 60 seconds, followed by remaining-enemy cleanup. Setup and pauses do not count. This is a mechanics prototype with deliberately basic graphics; it does not yet use the finished concept art.
-
-## Feedback to collect
-
-- Does placing automatic defenses feel satisfying?
-- Does salvaging feel useful without being overwhelming?
-- Can you read the three lanes from the doorway?
-- Are bone absorption and chipmunk retreat understandable?
+A starting Log Drop and aligned brambles demonstrate the combo. Spend the additional 160 materials on backup defenses. Wave spawning lasts 60 seconds, followed by surviving-enemy cleanup. This remains a basic-graphics mechanics prototype, not the finished illustrated game or three-level campaign.
 
 ## Development
 
-`engine.js` contains the simulation, `game.js` the interface and drawing, and `template.html` the page. Run `build.py` to assemble the standalone `index.html`. Run `node tests.cjs` for targeted simulation checks.
+Run `node prototype/tests.cjs` from the repository root. Run `python3 prototype/build.py` to update both prototype/index.html and docs/index.html. GitHub Pages publishes docs from main.
 
-Verified: build costs, placement, lane-specific sweeps, cooldowns, snare holds, two-hit Brutes, bone recovery, retreat and recall, pausing, victory and defeat. The simulation checks exercise automatic firing without player trigger inputs. Cross-browser and first-time-user testing remain.
+The simulation checks gravity transfer and landing delay, trap cooldowns and lane isolation, route transitions, bottom-only damage, economy, brutes, salvage, pause, victory and defeat. Visual browser checks use desktop and phone-sized viewports; physical-device testing remains useful.

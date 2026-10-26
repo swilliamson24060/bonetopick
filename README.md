@@ -6,7 +6,7 @@ Play online: https://swilliamson24060.github.io/bonetopick/
 
 ## Current playable prototype
 
-Open `prototype/index.html` in a browser. This is the latest 60-second doorway-view playtest with automatic defenses, salvage, and skeleton bone absorption. No installation is needed to play.
+Open `prototype/index.html` in a browser. This is the latest 60-second Great Oak Siege playtest with automatic defenses, salvage, and skeleton bone absorption. No installation is needed to play.
 
 - Run simulation checks: `node prototype/tests.cjs`
 - Rebuild the standalone HTML: `python3 prototype/build.py`
@@ -16,11 +16,13 @@ Open `prototype/index.html` in a browser. This is the latest 60-second doorway-v
 
 Phaser + TypeScript, with Vite for development and packaging. This is a recommendation; the current prototype remains plain JavaScript and Canvas. Engine migration has not started.
 
-Phaser supports browser games and 2D animation. The view from the Oak can be built with layered artwork, depth sorting, and perspective scaling. Keep simulation logic independent of rendering so automatic traps, wave rules, salvage, and enemy combinations remain testable.
+Phaser supports browser games and 2D animation. The side-on Oak view uses three connected branch platforms and constant-size characters. Keep simulation logic independent of rendering so automatic traps, wave rules, salvage, and enemy combinations remain testable.
 
 ## Direction
 
-- Fixed view from the Oak looking down lanes toward the forest.
+- Flat side view of three stacked Oak branches; enemies remain the same size.
+- Alternating paths connected by ladders lead to the bottom doorstep.
+- Automatic Log Drops move enemies one level down; brambles underneath create gravity combos.
 - Automatic traps assembled from nature by chipmunks; no manual firing.
 - Skeletons can combine or absorb bones to develop different powers.
 - Whimsical cartoon story interludes.
