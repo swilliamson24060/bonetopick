@@ -2,6 +2,8 @@
 
 A whimsical lane-defense browser game. Chipmunks defend their Oak against skeletons using nature-built traps that trigger and reset automatically.
 
+Play online: https://swilliamson24060.github.io/bonetopick/
+
 ## Current playable prototype
 
 Open `prototype/index.html` in a browser. This is the latest 60-second doorway-view playtest with automatic defenses, salvage, and skeleton bone absorption. No installation is needed to play.
@@ -35,3 +37,7 @@ Phaser supports browser games and 2D animation. The view from the Oak can be bui
 Reference concept art is in `docs/doorway-concept.png`. Earlier discarded circular versions are excluded from this repository.
 
 Engine reference: https://docs.phaser.io/
+
+## GitHub Pages
+
+Pages publishes from `main`, `/docs`. Running `python3 prototype/build.py` updates both the local prototype and `docs/index.html`. Commit and push those files to update the online game.
