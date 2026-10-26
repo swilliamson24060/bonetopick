@@ -1,0 +1,37 @@
+# A Bone to Pick
+
+A whimsical lane-defense browser game. Chipmunks defend their Oak against skeletons using nature-built traps that trigger and reset automatically.
+
+## Current playable prototype
+
+Open `prototype/index.html` in a browser. This is the latest 60-second doorway-view playtest with automatic defenses, salvage, and skeleton bone absorption. No installation is needed to play.
+
+- Run simulation checks: `node prototype/tests.cjs`
+- Rebuild the standalone HTML: `python3 prototype/build.py`
+- See `prototype/README.md` for controls and mechanics.
+
+## Recommended production stack
+
+Phaser + TypeScript, with Vite for development and packaging. This is a recommendation; the current prototype remains plain JavaScript and Canvas. Engine migration has not started.
+
+Phaser supports browser games and 2D animation. The view from the Oak can be built with layered artwork, depth sorting, and perspective scaling. Keep simulation logic independent of rendering so automatic traps, wave rules, salvage, and enemy combinations remain testable.
+
+## Direction
+
+- Fixed view from the Oak looking down lanes toward the forest.
+- Automatic traps assembled from nature by chipmunks; no manual firing.
+- Skeletons can combine or absorb bones to develop different powers.
+- Whimsical cartoon story interludes.
+- First three planned levels: 2, 3, and 4 minutes; no level beyond 5 minutes.
+- The short prototype is a mechanics test, not the full first level.
+
+## Next milestones
+
+1. Validate automatic trap placement, economy, and salvage through playtesting.
+2. Port the approved loop into Phaser and TypeScript while keeping regression checks.
+3. Build three timed levels, differentiated trap combinations and skeleton powers.
+4. Add original illustrated assets, animation, sound, and story interludes.
+
+Reference concept art is in `docs/doorway-concept.png`. Earlier discarded circular versions are excluded from this repository.
+
+Engine reference: https://docs.phaser.io/
